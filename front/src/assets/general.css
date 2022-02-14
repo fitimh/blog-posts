@@ -1,0 +1,22 @@
+.card-img img {
+   width: 300px;
+   height: 220px;
+   background-repeat: no-repeat;
+   background-size: contain;
+}
+
+.card {
+   margin: 30px -30px 0 30px;
+   width: 85%;
+}
+
+.bd-blog {
+   margin: 35px 0px 0px 200px;
+}
+
+.card-body > .h5 > a {
+   list-style: none;
+   text-decoration: none;
+   color: black;
+   font-weight: 600;
+}
