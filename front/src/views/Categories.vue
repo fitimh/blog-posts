@@ -15,6 +15,7 @@ export default {
    name: "Home",
    components: {
       navbar,
+   
    },
 };
 </script>

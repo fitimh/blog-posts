@@ -28,6 +28,14 @@
             <li class="nav-item">
                <router-link class="nav-link" :to="{ name: 'Categories', params: {name: 'tech' } }">Tech</router-link>
             </li>
+             <li class="nav-item">
+               <router-link class="nav-link" :to="{ name: 'login', params: {name: 'login' } }">Login</router-link>
+            </li>
+
+             <li class="nav-item">
+               <router-link class="nav-link btn-primary text-white" :to="{ name: 'register', params: {name: 'register' } }">Register</router-link>
+            </li>
+
          </ul>
       </nav>
    </div>
