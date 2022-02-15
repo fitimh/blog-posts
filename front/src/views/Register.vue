@@ -1,7 +1,7 @@
 <template>
    <div class="register">
-      <register />
-      {{ router.params.name }}
+      <Register />
+      {{ $route.params.name }}
    </div>
 </template>
 <script>
