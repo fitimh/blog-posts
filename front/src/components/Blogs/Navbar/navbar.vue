@@ -11,26 +11,22 @@
 
          <ul class="nav justify-content-end">
             <li class="nav-item">
-               <div class="nav-link">
-                  <router-link to="/nature">Nature</router-link>
-               </div>
-
-               <!-- <a class="nav-link" href="#">Nature</a> -->
+               <router-link class="nav-link" :to="{ name: 'Categories', params: {name: 'nature' } }">Nature</router-link>
             </li>
             <li class="nav-item">
-               <router-link to="/nature">People</router-link>
+               <router-link class="nav-link" :to="{ name: 'Categories', params: {name: 'people' } }">People</router-link>
             </li>
             <li class="nav-item">
-               <a class="nav-link" href="#">Trips</a>
+               <router-link class="nav-link" :to="{ name: 'Categories', params: {name: 'trips' } }">Trips</router-link>
             </li>
             <li class="nav-item">
-               <a class="nav-link" href="#">Animals</a>
+               <router-link class="nav-link" :to="{ name: 'Categories', params: {name: 'animals' } }">Animals</router-link>
             </li>
             <li class="nav-item">
-               <a class="nav-link" href="#">Fashion</a>
+               <router-link class="nav-link" :to="{ name: 'Categories', params: {name: 'fashion' } }">Fashion</router-link>
             </li>
             <li class="nav-item">
-               <a class="nav-link" href="#">Tech</a>
+               <router-link class="nav-link" :to="{ name: 'Categories', params: {name: 'tech' } }">Tech</router-link>
             </li>
          </ul>
       </nav>
