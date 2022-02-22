@@ -1,54 +1,57 @@
 <template>
-   <div id="addBlog">
-      <h1>Add blogs</h1>
-      <form>
-         <div class="form-group">
-            <label for="exampleFormControlInput1">Email address</label>
+  <div id="addBlog">
+    <h1>Add blogs</h1>
+
+    <div class="container">
+      <div
+        class="col-xl-11 col-lg-10 col-mb-8 col-sm-12 p-2 mb-3 w-50 justify-content-center"
+      >
+        <form class="justify-content-center">
+          <div class="form-group">
+            <label>Tittle Blog</label>
             <input
-               type="email"
-               class="form-control"
-               id="exampleFormControlInput1"
-               placeholder="name@example.com"
+              v-model.lazy="blog.title"
+              type="text"
+              class="form-control"
+              id="exampleFormControlInput1"
+              required
             />
-         </div>
-         <div class="form-group">
-            <label for="exampleFormControlSelect1">Example select</label>
-            <select class="form-control" id="exampleFormControlSelect1">
-               <option>1</option>
-               <option>2</option>
-               <option>3</option>
-               <option>4</option>
-               <option>5</option>
-            </select>
-         </div>
-         <div class="form-group">
-            <label for="exampleFormControlSelect2"
-               >Example multiple select</label
-            >
-            <select
-               multiple
-               class="form-control"
-               id="exampleFormControlSelect2"
-            >
-               <option>1</option>
-               <option>2</option>
-               <option>3</option>
-               <option>4</option>
-               <option>5</option>
-            </select>
-         </div>
-         <div class="form-group">
-            <label for="exampleFormControlTextarea1">Example textarea</label>
-            <textarea
-               class="form-control"
-               id="exampleFormControlTextarea1"
-               rows="3"
-            ></textarea>
-         </div>
-      </form>
-   </div>
+          </div>
+          <div class="form-group">
+            <label for="exampleFormControlSelect1">Blog Content</label>
+            <textarea class="form-control" v-model="blog.content"></textarea>
+          </div>
+        </form>
+        <div id="preview">
+          <h3>Preview Blog</h3>
+          <p>Blog Tittle: {{ blog.title }}</p>
+          <p>Blog Content: {{ blog.content }}</p>
+        </div>
+        <button class="btn bg-primary p-4 w-25 mb-3 mb-sm-5">Save</button>
+      </div>
+    </div>
+  </div>
 </template>
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      blog: {
+        title: "",
+        content: "",
+      },
+    };
+  },
+  methods: {},
+};
 </script>
-<style></style>
+<style scoped>
+#row_style {
+  margin-top: 30px;
+}
+
+#submit {
+  display: block;
+  margin: auto;
+}
+</style>
