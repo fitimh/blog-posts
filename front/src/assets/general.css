@@ -11,9 +11,8 @@
 }
 
 .bd-blog {
-   margin: 35px 0px 0px 200px;
+   justify-content: center;
 }
-
 .card-body > .h5 > a {
    list-style: none;
    text-decoration: none;

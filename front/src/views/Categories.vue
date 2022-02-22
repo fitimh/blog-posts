@@ -2,8 +2,7 @@
    <div class="home">
       <navbar />
 
-
-         {{ $route.params.name }}
+      {{ $route.params.name }}
    </div>
 </template>
 
@@ -15,7 +14,6 @@ export default {
    name: "Home",
    components: {
       navbar,
-   
    },
 };
 </script>

@@ -1,13 +1,12 @@
 <template>
    <div class="login">
-      <Login />
       {{ $route.params.name }}
+      <Login />
    </div>
 </template>
 
 <script>
 // @ is an alias to /src
-// import login from "@/components/Login/Login";
 
 import Login from "@/components/Login/login.vue";
 
