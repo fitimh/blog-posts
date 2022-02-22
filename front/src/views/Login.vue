@@ -1,19 +1,19 @@
 <template>
-   <div class="home">
-      <navbar />
-
+   <div class="login">
       {{ $route.params.name }}
+      <Login />
    </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import navbar from "@/components/Blogs/Navbar/navbar";
+
+import Login from "@/components/Login/login.vue";
 
 export default {
-   name: "Home",
+   name: "login",
    components: {
-      navbar,
+      Login,
    },
 };
 </script>
