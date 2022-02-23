@@ -24,6 +24,20 @@
                 v-model.lazy="blog.content"
               ></textarea>
             </div>
+            <div class="form-group" id="checkboxes">
+              <label>Ninjas</label>
+              <input type="checkbox" value="" v-model="blog.categories"/>
+              <label>BLla</label>
+              <input type="checkbox" value="" v-model="blog.categories"/>
+
+              <label>testt</label>
+              <input type="checkbox" value="" v-model="blog.categories"/>
+
+              <label>test11</label>
+              <input type="checkbox" value="" v-model="blog.categories"/>
+
+            
+            </div>
             <div class="form-group">
               <img :src="previewImage" class="uploading-image" width="350" height="220" />
               <input type="file" accept="image/jpeg" @change="uploadImage" />
@@ -49,6 +63,7 @@ export default {
         title: "",
         content: "",
         previewImage: null,
+        categories[],
       },
     };
   },
