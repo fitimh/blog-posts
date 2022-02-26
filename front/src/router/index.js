@@ -6,7 +6,7 @@ import Categories from "@/views/Categories";
 import login from "@/views/Login";
 import register from "@/views/Register";
 import addblog from "@/views/admin/Blog/add"
-
+import dashboard from "@/views/admin/Dashboard/dashboard"
 Vue.use(VueRouter);
 
 const routes = [
@@ -15,7 +15,8 @@ const routes = [
    {path: "/categories/:name", name: "Categories", component: Categories},
    {path: "/login", name: "login", component: login},
    {path: "/register", name: "register", component: register},
-   {path: "/admin/addBlog",name:"addblog", component:addblog}
+   {path: "/admin/addBlog",name:"addblog", component:addblog},
+   {path: "/admin/dashboard", name:"dashboard", component:dashboard},
 ];
 
 const router = new VueRouter({

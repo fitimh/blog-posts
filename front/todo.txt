@@ -1,0 +1,11 @@
+1. web page blog posts news
+2. admin, super-admin
+3. admin add new blog posts, category
+4. login panel for admin and register admin panel.
+5. admin dashboard
+6. landing page of(grid view features blogs new lastest);
+7. blog posts -> tittle,desc, img, category;
+8. single page posts of blog 
+9. like, comment, share
+10 integrated messages support 
+11 crud blog posts
