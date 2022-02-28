@@ -1,4 +1,4 @@
-# it-app
+# blog posts
 
 ## Project setup
 ```
