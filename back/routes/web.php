@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PostController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -15,10 +17,5 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
-
-    Route::post('posts', 'PostController@store');
-    
-    Route::get('posts', 'PostController@get');
-    
-    Route::delete('posts/{id}', 'PostController@delete');
 });
+    
