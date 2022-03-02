@@ -11,6 +11,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class Post extends Model
 {
+    use HasFactory;
     /**
      * The attributes that are mass assignable.
      *

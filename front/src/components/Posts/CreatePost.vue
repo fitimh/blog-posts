@@ -1,4 +1,5 @@
 <template>
+<div class="posts">
   <form action="" @submit="createPost(post)">
     <h4 class="text-center font-weight-bold">Post creation form</h4>
     <div class="form-group">
@@ -27,6 +28,7 @@
       </button>
     </div>
   </form>
+  </div>
 </template>
 
 <script>
@@ -42,7 +44,7 @@ export default {
   },
   methods: {
     createPost(post) {
-      this.$store.dispatch("createPost", post);
+      this.$store.dispatch("add", post);
     },
   },
   computed: {

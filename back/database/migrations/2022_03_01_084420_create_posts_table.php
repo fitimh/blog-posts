@@ -17,7 +17,9 @@ class CreatePostsTable extends Migration
             $table->increments('id');
             $table->string('title');
             $table->text('content');
+            $table->string('fisi')->nullable(); // kjo field osht varchar(255) null munet mekan null
             $table->timestamps();
+          
         });
     }
 
