@@ -25,6 +25,7 @@ class PostController extends Controller
         $post = Post::where('id', $id)->first();
 
         if($post){
+
             $post->title = $request->input('title');
             $post->content = $request->input('content');
             $post->save();
@@ -41,7 +42,6 @@ class PostController extends Controller
             return response()->json('Post deleted successfully!');
         }
     }
-
     public function get(){
         $post = Post::get();
 

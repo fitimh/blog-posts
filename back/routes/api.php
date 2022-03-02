@@ -27,4 +27,3 @@ Route::get('/', 'PostController@get');
 Route::get('/{id}', 'PostController@getById');
     
 
-
