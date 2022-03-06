@@ -15,11 +15,13 @@ class CreatePostsTable extends Migration
     {
         Schema::create('posts', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('title');
-            $table->text('content');
-            $table->string('fisi')->nullable(); // kjo field osht varchar(255) null munet mekan null
+            $table->integer('cat_id')->unsigned()->nullable();
+            $table->integer('user_id')->unsigned()->nullable();
+            $table->string('title')->nullable();
+            $table->text('content')->nullable();
+            $table->string('photo')->nullable();
             $table->timestamps();
-          
+
         });
     }
 

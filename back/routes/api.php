@@ -19,11 +19,13 @@ Route::get('/user', function (Request $request) {
     return $request->user();
 });
 
-
+//post
 Route::post('/add', 'PostController@add');
 Route::put('/{id}', 'PostController@update');
 Route::delete('/{id}', 'PostController@delete');
 Route::get('/', 'PostController@get');
 Route::get('/{id}', 'PostController@getById');
-    
 
+
+
+Route::post('/register', 'UserController@addUser');
