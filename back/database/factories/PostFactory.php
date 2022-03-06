@@ -11,16 +11,15 @@ class PostFactory extends Factory
 
 {
     protected $model = Post::class;
-    
- 
     public function definition()
-    { 
+    {
+
+
         return [
-            
+
             'title' =>$this->faker->sentence(3, true),
             'content' =>$this->faker->realText($this->faker->numberBetween(10, 100)),
 
         ];
-
     }
 }
