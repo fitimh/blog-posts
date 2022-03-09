@@ -12,6 +12,7 @@ class UserController extends Controller
     {
         return view('users');
     }
+    
     public function addUser(Request $request)
     {
         $user = new User();
