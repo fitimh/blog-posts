@@ -4,7 +4,8 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreatePostsTable extends Migration
+class CreateBlogsTable extends Migration // ku ki _ ktu shkon shkronj  e madhe
+
 {
     /**
      * Run the migrations.
@@ -13,13 +14,13 @@ class CreatePostsTable extends Migration
      */
     public function up()
     {
-        Schema::create('posts', function (Blueprint $table) {
+        Schema::create('blogs', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('cat_id')->unsigned()->nullable();
-            $table->integer('user_id')->unsigned()->nullable();
-            $table->string('title')->nullable();
-            $table->text('content')->nullable();
-            $table->string('photo')->nullable();
+            $table->string('title');
+//            $table->string('user_id');
+            $table->text('desc');
+            $table->string('featuredImage')->nullable();
+            $table->integer('views')->default(0);
             $table->timestamps();
 
         });
@@ -32,6 +33,6 @@ class CreatePostsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('posts');
+        Schema::dropIfExists('blogs');
     }
 }

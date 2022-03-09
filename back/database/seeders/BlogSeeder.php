@@ -2,10 +2,10 @@
 
 namespace Database\Seeders;
 
-use App\Models\Post;
+use App\Models\Blog;
 use Illuminate\Database\Seeder;
 
-class PostSeeder extends Seeder
+class BlogSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -14,9 +14,9 @@ class PostSeeder extends Seeder
      */
     public function run()
     {
-        Post::create([
+        Blog::create([
             'title' => 'blogu i pare',
-            'content' => 'une jam blogu i pare i krijaur per eample te matemaiktes',
+            'desc' => 'une jam blogu i pare i krijaur per eample te matemaiktes',
         ]);
     }
 }
