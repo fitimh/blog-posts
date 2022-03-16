@@ -17,7 +17,7 @@ class PostController extends Controller
         $post = new Post;
         $post->fill($request->all());
         $post->save();
-        
+
         return response()->json('Post successfully added!');
     }
 
@@ -53,6 +53,6 @@ class PostController extends Controller
 
         return response()->json($post);
     }
-    
+
 
 }
