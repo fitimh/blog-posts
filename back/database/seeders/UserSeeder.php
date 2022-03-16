@@ -17,11 +17,11 @@ class UserSeeder extends Seeder
     {
         //
 
-        User::create([
-            'name' => 'Fitim Hoti',
-            'email' => 'fitim@hoti.com',
-            'password' => Hash::make('fitimhoti')
-        ]);
-        
+//        User::create([
+//            'name' => 'Fitim Hoti',
+//            'email' => 'fitim@hoti.com',
+//            'password' => Hash::make('secret'),
+//            'role' => 1
+//        ]);
     }
 }
