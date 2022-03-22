@@ -12,7 +12,7 @@
     </div>
     <div class="form-group">
       <textarea
-        v-model="post.content"
+        v-model="post.desc"
         placeholder="Post content"
         class="form-control"
       >
@@ -22,7 +22,7 @@
       <button
         :disabled="!isValid"
         class="btn btn-block btn-primary"
-        @click.prevent="createPost(post)"
+        @click.prevent="addPost(post)"
       >
         Submit
       </button>
@@ -38,18 +38,21 @@ export default {
     return {
       post: {
         title: "",
-        content: "",
+        desc: "",
       },
     };
   },
   methods: {
-    createPost(post) {
-      this.$store.dispatch("add", post);
+   
+     addPost(post)
+    {
+      this.$store.dispatch('add',post);
+      console.log(post)
     },
   },
   computed: {
     isValid() {
-      return this.post.title !== "" && this.post.content !== "";
+      return this.post.title !== "" && this.post.desc !== "";
     },
   },
 };

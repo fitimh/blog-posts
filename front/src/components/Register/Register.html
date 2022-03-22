@@ -1,0 +1,25 @@
+<div class="container p-5">
+  <h3 class="text-center mt-2 mb-5">Create Account Free</h3>
+  <div class="col-md-12">
+    <form v-on:submit.prevent="create_user">
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Enter Name</label>
+       <input type="text" name="name" class="form-control" id="exampleInputName1" aria-describedby="nameHelp" placeholder="Enter Username" v-model="form.name">
+      </div>
+      
+     <div class="mb-3">
+        <label for="exampleFormControlInput2" class="form-label">Enter Email</label>
+       <input type="text" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Email" v-model="form.email">
+      </div>
+       <div class="mb-3">
+        <label for="exampleFormControlInput3" class="form-label">Enter Password</label>
+       <input type="password" name="password" class="form-control" id="exampleInputPass1" aria-describedby="passHelp" placeholder="Enter Password" v-model="form.password">
+      </div>
+       <div class="mb-3">
+        <label for="exampleFormControlInput3" class="form-label">Password Confirmation</label>
+       <input type="password" name="password" class="form-control" id="exampleInputPass1" aria-describedby="passHelp" placeholder="Enter Password" v-model="form.password_confirmation">
+      </div>
+      <button type="submit" class="btn btn-primary mt-5">Submit</button>
+</form>
+</div>
+</div>
