@@ -12,7 +12,7 @@
       <tbody>
         <tr :v-for="post in posts">
           <td>{{ post.title }}</td>
-          <td>{{ post.content }}</td>
+          <td>{{ post.desc }}</td>
           <td>
             <button class="btn btn-danger" @click="deletePost(post)">
               <i style="color: white" class="fa fa-trash"></i>
@@ -35,6 +35,10 @@ export default {
   methods: {
     deletePost(post) {
       this.$store.dispatch("deletePost", post);
+    },
+    addPost(post)
+    {
+      this.$store.dispatch('addPost',post);
     },
   },
   computed: {
