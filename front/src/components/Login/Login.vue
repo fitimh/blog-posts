@@ -2,7 +2,7 @@
 <script src="./Login.js" />
 
 <style scoped>
-body {
+/* body {
    margin: 0;
    padding: 0;
    background-color: #17a2b8;
@@ -29,7 +29,11 @@ body {
 #regiter-link {
    margin-top: -60px !important;
 }
+// https://freebiesui.com/xd-freebies/xd-web-templates/
+// /https://xdfile.com/page/16/
+ */
+
+
+
 </style>
 
-// https://freebiesui.com/xd-freebies/xd-web-templates/
-///https://xdfile.com/page/16/
