@@ -14,16 +14,8 @@ use App\Http\Controllers\PostController;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
-//'middleware' => 'auth:sanctum' - qikjo tash
-//pe r qeta sum bajke
-//ama laura sot tha qa je tu perdor per token thash Jwt edhe sanctum
-//tani ma bani tha nese perdoor jwt ti gjeneron creditinals vet edhe ski nevoj me ba function login hiq
-// sanctum veq jem tu perdor edhe vllaqko qikjo osht mos ma zgat ma shum ktu laura qlarura
-//hahahahahahh po a the met kallxu diqak
-//ta kallxova lauren ahahahha
-//se ato market sja ke lyp numrin hahaha
-// AHHAHAHAH e nanen qa o ky middleware is admin
-//nese osht admin e shtin qat route nese jo i thot shkko qi nasjen tjt hahahaha
+//'middleware' => 'auth:sanctum' -
+
 
 
 
@@ -37,12 +29,20 @@ Route::group(['middleware' => 'auth:sanctum'], function(){
 });
 
 //post
-Route::post('/add', 'PostController@add');
-Route::put('/{id}', 'PostController@update');
-Route::delete('/{id}', 'PostController@delete');
-Route::get('/', 'PostController@get');
-Route::get('/{id}', 'PostController@getById');
+//add group for posts
+//Route::prefix("posts"->group(function () {
+//    Route::post('/add', 'PostController@add');
+//    Route::put('/{id}', 'PostController@update');
+//    Route::delete('/{id}', 'PostController@delete');
+//    Route::get('/', 'PostController@get');
+//    Route::get('/{id}', 'PostController@getById');
+//});
 
+ Route::post('/add', 'PostController@add');
+    Route::put('/{id}', 'PostController@update');
+    Route::delete('/{id}', 'PostController@delete');
+    Route::get('/', 'PostController@get');
+    Route::get('/{id}', 'PostController@getById');
 
 Route::prefix('auth')->group(function(){
     Route::post('register', 'AuthController@register');
