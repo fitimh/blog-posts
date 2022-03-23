@@ -1,55 +1,37 @@
-<div id="login">
-   <h3 class="text-center text-white pt-5">Login form</h3>
-   <div class="container">
-      <div id="login-row" class="row justify-content-center align-items-center">
-         <div id="login-column" class="col-md-6">
-            <div id="login-box" class="col-md-12">
-               <form id="login-form" class="form" action="" method="post">
-                  <h3 class="text-center text-info">Login</h3>
-                  <div class="form-group">
-                     <label for="username" class="text-info">Username:</label
-                     ><br />
-                     <input
-                        type="text"
-                        name="username"
-                        id="username"
-                        class="form-control"
-                     />
-                  </div>
-                  <div class="form-group">
-                     <label for="password" class="text-info">Password:</label
-                     ><br />
-                     <input
-                        type="text"
-                        name="password"
-                        id="password"
-                        class="form-control"
-                     />
-                  </div>
-                  <div class="form-group">
-                     <label for="remember-me" class="text-info"
-                        ><span>Remember me</span> <span
-                           ><input
-                              id="remember-me"
-                              name="remember-me"
-                              type="checkbox" /></span></label
-                     ><br />
-                     <input
-                        type="submit"
-                        name="submit"
-                        class="btn btn-info btn-md"
-                        value="submit"
-                     />
-                  </div>
-                  <div
-                     id="register-link"
-                     class="text-right mt-0 justify-content-end d-flex"
-                  >
-                     <a href="#" class="text-info">Register here</a>
-                  </div>
-               </form>
-            </div>
-         </div>
+<div class="container p-5">
+  <h3 class="text-center mt-2 mb-5">Login</h3>
+  <div class="col-md-12">
+    <form v-on:submit.prevent="login_user">
+      <div class="mb-3">
+        <label for="exampleFormControlInput2" class="form-label"
+          >Enter Email</label
+        >
+        <input
+          type="text"
+          name="email"
+          class="form-control"
+          id="exampleInputEmail1"
+          aria-describedby="emailHelp"
+          placeholder="Enter Email"
+          v-model="form.email"
+        />
       </div>
-   </div>
+      <div class="mb-3">
+        <label for="exampleFormControlInput3" class="form-label"
+          >Enter Password</label
+        >
+        <input
+          type="password"
+          name="password"
+          class="form-control"
+          id="exampleInputPass1"
+          aria-describedby="passHelp"
+          placeholder="Enter Password"
+          v-model="form.password"
+        />
+      </div>
+
+      <button type="submit" class="btn btn-primary mt-5">Submit</button>
+    </form>
+  </div>
 </div>
