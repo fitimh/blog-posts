@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Post;
+use App\Models\Blog;
 use App\Models\User;
 use Illuminate\Http\Request;
 
-class PostController extends Controller
+class BlogController extends Controller
 {
     public function index()
     {
@@ -14,7 +14,7 @@ class PostController extends Controller
     }
 
     public function add(Request $request){
-        $post = new Post;
+        $post = new Blog;
         $post->fill($request->all());
         $post->save();
 
@@ -22,7 +22,7 @@ class PostController extends Controller
     }
 
     public function update(Request $request, $id){
-        $post = Post::where('id', $id)->first();
+        $post = Blog::where('id', $id)->first();
 
         if($post){
 
@@ -35,7 +35,7 @@ class PostController extends Controller
     }
 
     public function delete($id){
-        $post = Post::find($id);
+        $post = Blog::find($id);
 
         if($post){
             $post->delete();
@@ -43,13 +43,13 @@ class PostController extends Controller
         }
     }
     public function get(){
-        $post = Post::get();
+        $post = Blog::get();
 
         return response()->json($post);
     }
 
     public function getById($id){
-        $post = Post::find($id);
+        $post = Blog::find($id);
 
         return response()->json($post);
     }

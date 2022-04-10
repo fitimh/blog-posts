@@ -1,5 +1,5 @@
-<template src="./Login.html" />
-<script src="./Login.js" />
+<template src="./login.html" />
+<script src="./login.js" />
 
 <style scoped>
 /* body {

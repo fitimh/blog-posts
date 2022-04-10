@@ -18,13 +18,15 @@ export default {
       let self = this;
       axios
         .post(self.$apiUrl + "/api/auth/login", this.form)
-        .then((resp) => {
-          console.log(resp["data"]["status"]);
+        .then((resp) => { // te then nuk hin kurr statusi i errorit bir veq nejse te catch hin gjith errori
+          //em qeta e msova kete moment haha prit tash kqyre\
+           
+          console.log(resp.status); // munesh edhe resp.data.status  se kjo ['data'] kajher ta krijon nese nuk egziston e munesh mu fur
           //this.loadlist();
           //reset form
           this.form.email = "";
           this.form.password = "";
-          if (resp["data"]["status"] == "error") {
+          if (resp.status == "error") {
             Swal.fire({
               title: "OPPS",
               text: "error",

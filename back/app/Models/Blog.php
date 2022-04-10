@@ -19,7 +19,7 @@ class Blog extends Model
      */
     protected $fillable = [
         'title',
-        'content'
+        'content',
     ];
 
     /**
@@ -28,7 +28,7 @@ class Blog extends Model
      * @var array<int, string>
      */
     protected $hidden = [
-
+ 
     ];
 
     /**

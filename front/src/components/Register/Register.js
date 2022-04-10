@@ -31,15 +31,18 @@ export default {
           this.form.password_confirmation = "";
           //success message alert
           Swal.fire({
-            title: "Hurry",
+            title: "Success!",
             text: "User has been registered successfully",
             icon: "success",
           });
           return response;
         })
         .catch((e) => {
-          console.log(e);
-          Swal.fire({ title: "Hurry", text: e, icon: "warning" });
+          let text =
+            e.response.data.errors.name || e.response.data.errors.email ||
+            e.response.data.errors.password;
+            console.log(e.response);
+          Swal.fire({ title: "Error", text: text, icon: "warning" });
         });
     },
   },
