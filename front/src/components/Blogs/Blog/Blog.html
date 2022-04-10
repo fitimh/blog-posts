@@ -1,120 +1,58 @@
 <section>
-   <div class="container bd-blog">
-      <div class="row mt-50">
-         <div class="col-xl-4 col-lg-4 col-sm-12 col-md-6 mb-2-6">
-            <article class="card card-style2">
-               <div class="card-img">
-                  <img
-                     class="rounded-top"
-                     src="https://picsum.photos/seed/picsum/200/300"
-                     alt="..."
-                  />
-               </div>
-               <div class="card-body">
-                  <h3 class="h5">
-                     <a href="#">Loft therapy taking care of your home</a>
-                  </h3>
-                  <div class="date"><span>15</span>Sep</div>
-                  <a href="#!" class="read-more">read more</a>
-               </div>
-            </article>
-         </div>
-         <div class="col-lg-4 col-md-6 mb-2-">
-            <article class="card card-style2">
-               <div class="card-img">
-                  <img
-                     class="rounded-top img"
-                     src="https://picsum.photos/id/237/200/300"
-                     alt="..."
-                  />
-               </div>
-               <div class="card-body">
-                  <h3 class="h5">
-                     <a href="#!">All you need to know about cleaning</a>
-                  </h3>
-                  <div class="date"><span>18</span>Aug</div>
-                  <a href="#!" class="read-more">read more</a>
-               </div>
-            </article>
-         </div>
-         <div class="col-lg-4 col-md-6 mb-2-6">
-            <article class="card card-style2">
-               <div class="card-img">
-                  <img
-                     class="rounded-top"
-                     src="https://picsum.photos/200/300?grayscale"
-                     alt="..."
-                  />
-               </div>
-               <div class="card-body">
-                  <h3 class="h5">
-                     <a href="#!">This cleaning tips will haunt you forever</a>
-                  </h3>
-                  <div class="date"><span>24</span>May</div>
-                  <a href="#!" class="read-more">read more</a>
-               </div>
-            </article>
-         </div>
-         <div class="col-lg-4 col-md-6 mb-2-6 mb-lg-0">
-            <article class="card card-style2">
-               <div class="card-img">
-                  <img
-                     class="rounded-top"
-                     src="https://picsum.photos/seed/picsum/200/300"
-                     alt="..."
-                  />
-               </div>
-               <div class="card-body">
-                  <h3 class="h5">
-                     <a href="#!"
-                        >Five things to know about cleaning service office</a
-                     >
-                  </h3>
-                  <div class="date"><span>24</span>May</div>
-                  <a href="#!" class="read-more">read more</a>
-               </div>
-            </article>
-         </div>
-         <div class="col-lg-4 col-md-6 mb-2-6 mb-md-0">
-            <article class="card card-style2">
-               <div class="card-img">
-                  <img
-                     class="rounded-top"
-                     src="https://picsum.photos/200/300/?blur"
-                     alt="..."
-                  />
-               </div>
-               <div class="card-body">
-                  <h3 class="h5">
-                     <a href="#!"
-                        >Seven difficult things about cleaning service like</a
-                     >
-                  </h3>
-                  <div class="date"><span>14</span>Apr</div>
-                  <a href="#!" class="read-more">read more</a>
-               </div>
-            </article>
-         </div>
-         <div class="col-lg-4 col-md-6">
-            <article class="card card-style2">
-               <div class="card-img">
-                  <img
-                     class="rounded-top"
-                     src="https://picsum.photos/200/300/?blur"
-                     alt="..."
-                  />
-               </div>
-               <div class="card-body">
-                  <h3 class="h5">
-                     <a href="#!"
-                        >The hidden agenda of window cleaning conce pt</a
-                     >
-                  </h3>
-                  <div class="date"><span>26</span>Mar</div>
-                  <a href="#!" class="read-more">read more</a>
-               </div>
-            </article>
-         </div>
+   
+</div>
+<div class="container bd-blog">
+   <div class="row mt-50">
+      <div class="col-xl-4 col-lg-4 col-sm-12 col-md-6 mb-2-6"  v-for="product in products" :key="product.id">
+         <article class="card card-style2">
+          <div class="card-img">
+             <img
+              class="rounded-top"
+              src="https://picsum.photos/seed/picsum/200/300"
+              alt="..."
+              
+            />
+          </div>
+          <div class="card-body">
+             <h3 class="h5">
+                <a href="#">{{product.title}}</a>
+               </h3>
+               <span>{{product.desc}}</span>
+               <div class="date"><span>15</span>Sep</div>
+               <a href="#!" class="read-more">read more</a>
+            </div>
+         </article>
       </div>
    </div>
+</div>
 </section>
+<div>
+  <h1>Hello</h1>
+
+    <div>
+        <h2 class="text-center">Products List</h2>
+ 
+        <table class="table">
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Detail</th>
+                <!-- <th>Actions</th> -->
+            </tr>
+            </thead>
+            <tbody>
+            <tr v-for="product in products" :key="product.id">
+                <td>{{ product.id }}</td>
+                <td>{{ product.title }}</td>
+                <td>{{ product.desc }}</td>
+                <td>
+                    <div class="btn-group" role="group">
+                        <router-link :to="{name: 'edit', params: { id: product.id }}" class="btn btn-success">Edit</router-link>
+                        <button class="btn btn-danger" @click="deleteProduct(product.id)">Delete</button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>

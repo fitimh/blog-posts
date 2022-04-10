@@ -18,6 +18,9 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
+        if(User::count()) {
+            return;
+        }
         User::create([
             'name' => 'Admin',
             'email' => 'admin@test.com',
@@ -25,6 +28,7 @@ class DatabaseSeeder extends Seeder
             'role' => 2
         ]);
         User::factory(10)->create();
+
 
         Blog::factory(10)->create();
 
